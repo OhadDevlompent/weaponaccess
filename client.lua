@@ -41,7 +41,7 @@ local function refreshPlayerData()
     debugPrint("Job:", PlayerJob, "Gang:", PlayerGang)
 end
 
-RegisterNetEvent('sq-weaponaccess:client:notify', function(msg, ntype)
+RegisterNetEvent('oh-weaponaccess:client:notify', function(msg, ntype)
     if Framework == 'qb' then
         TriggerEvent('QBCore:Notify', msg, ntype or 'error')
     else
@@ -50,7 +50,7 @@ RegisterNetEvent('sq-weaponaccess:client:notify', function(msg, ntype)
 end)
 
 local function notify(msg, ntype)
-    TriggerEvent('sq-weaponaccess:client:notify', msg, ntype)
+    TriggerEvent('oh-weaponaccess:client:notify', msg, ntype)
 end
 
 CreateThread(function()
